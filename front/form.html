@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  </head>
+  <body>
+    <div class="container mt-12">
+      <form>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Añadir nuevo pago</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cerrar sesión</a>
+          </li>
+        </ul>
+        <h3>Añadir nuevo pago</h3>
+        <div class="mb-3">
+          <label class="form-label">Fecha de vencimiento</label>
+          <input type="datetime-local" class="form-control" name="expiration_date">
+        </div>
+        <!-- <input type="number" step="0.01" id="totalAmt"> -->
+        <div class="input-group mb-3">
+           <label class="input-group-text" for="inputGroupSelect01">Servicio</label>
+           <select class="form-select" id="services">
+            <!-- <option value="1">One</option> -->
+           </select>
+        </div> 
+        <div class="mb-3">
+          <label class="form-label">Monto</label>
+          <input type="number" class="form-control" name="amount">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Añadir</button>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      config = {
+        // enableTime: true,
+        // dateFormat: "Y-m-d H:i",
+        // altInput: true,
+        // // altFormat: "F j, Y (h:S K)"
+      }
+      flatpickr("input[type=datetime-local]", config);
+
+    </script>
+    <script src="./form.js"></script>
+  </body>
+</html>
